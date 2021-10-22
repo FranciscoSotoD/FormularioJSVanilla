@@ -1,0 +1,22 @@
+@use 'base/variables' as v;
+
+.formulario {
+    // CORRECTO
+    &__grupo-correcto &__validacion-estado {
+        color: v.$verdeCorrecto;
+        opacity: 1;
+    }
+    &__grupo-correcto &__input {
+        border: .3rem solid v.$verdeCorrecto;
+    }
+
+    // INCORRECTO
+    &__grupo-incorrecto &__label,
+    &__grupo-incorrecto &__validacion-estado {
+        color: v.$rojo;
+        opacity: 1;
+    }
+    &__grupo-incorrecto &__input {
+        border: .3rem solid v.$rojo;
+    }
+}
